@@ -78,6 +78,7 @@ def sampler_fn(
         "dpm_adaptive": sampling.sample_dpm_adaptive,
         "dpmpp_2s_a": sampling.sample_dpmpp_2s_ancestral,
         "dpmpp_2m": sampling.sample_dpmpp_2m,
+        'DPM++ 2M Test': sampling.sample_dpmpp_2m_test,
     }
 
     samples = sampler_map[args.sampler](**sampler_args)
@@ -123,7 +124,4 @@ def make_inject_timing_fn(inject_timing, model, steps):
                         f"Must be an int, list of all ints (between step 1 and {steps}), or list of all floats between 0.0 and 1.0")
     return timing_fn
 
-samplers_k_diffusion = [
-    ...
-    ('DPM++ 2M Test', 'sample_dpmpp_2m_test', ['k_dpmpp_2m'], {}),
-    ('DPM++ 2M Karras Test', 'sample_dpmpp_2m_test', ['k_dpmpp_2m_ka'], {'scheduler': 'karras'}),]
+
