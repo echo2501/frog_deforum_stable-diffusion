@@ -126,4 +126,4 @@ def make_inject_timing_fn(inject_timing, model, steps):
 samplers_k_diffusion = [
     ...
     ('DPM++ 2M Test', 'sample_dpmpp_2m_test', ['k_dpmpp_2m'], {}),
-    ('DPM++ 2M Karras Test', 'sample_dpmpp_2m_test', ['k_dpmpp_2m_ka'], {'scheduler': 'karras'}),
+    ('DPM++ 2M Karras Test', 'sample_dpmpp_2m_test', ['k_dpmpp_2m_ka'], {'scheduler': 'karras'}),]
