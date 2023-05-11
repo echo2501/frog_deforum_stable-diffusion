@@ -122,3 +122,8 @@ def make_inject_timing_fn(inject_timing, model, steps):
         raise Exception(f"Not a valid input: inject_timing={inject_timing}\n" +
                         f"Must be an int, list of all ints (between step 1 and {steps}), or list of all floats between 0.0 and 1.0")
     return timing_fn
+
+samplers_k_diffusion = [
+    ...
+    ('DPM++ 2M Test', 'sample_dpmpp_2m_test', ['k_dpmpp_2m'], {}),
+    ('DPM++ 2M Karras Test', 'sample_dpmpp_2m_test', ['k_dpmpp_2m_ka'], {'scheduler': 'karras'}),
